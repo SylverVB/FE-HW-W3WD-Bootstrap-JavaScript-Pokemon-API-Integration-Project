@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="./static/style.css">
+<script src="./static/script.js" defer></script>
+<title>Pokémon App</title>
+</head>
+<body class="flex flex-column min-vh-100 search-page">
+    <nav class="navbar navbar-light">
+        <div class="container-fluid">
+            <div class="nav-brand-task-manager ms-5">
+                <a class="navbar-brand ms-3" href="./index.html">Pokémon App</a>
+            </div>
+            <div class="nav-profile">
+                <span class="navbar-text me-3">Welcome, Victor</span>
+                <button class="btn btn-outline-dark me-3" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fas fa-user-circle"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark me-2" aria-labelledby="userDropdown">
+                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li><a class="dropdown-item" href="./index.html">Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="container-fluid d-flex row min-vh-100 justify-content-center main-search-page">
+        <form onsubmit="handleSubmit(event)" class="row border shadow w-50 p-5 g-3 mt-5 mx-5 justify-content-center search-form">
+            <div class="form-floating col-12">
+                <input type="text" class="form-control" id="search" name="search" placeholder="Pokemon Name Here">
+                <label for="search" class="ps-3">Pokémon name</label>
+            </div>
+            <button type="submit" class="btn btn-outline-info col-6 ms-3 search-button-pokemon">Search</button>
+        </form>
+        <!-- Pokémon Display Section -->
+        <div class="row row-cols-1 row-cols-md-2 justify-content-center g-3 w-75" id="pokemon-display">
+            <!-- Pokémon cards will be here -->
+        </div>
+        <!-- Pokémon Team Builder Section -->
+        <div class="row row-cols-1 justify-content-center mb-5 g-3 w-100" id="team-display">
+            <a href="#"><img src="https://fontmeme.com/permalink/240622/41f1699997486143e900fefb018119f0.png" alt="pokemon-font" class="border-0" id="your-team"></a>
+            <div id="team"></div>
+        </div>
+    </main>
+
+    <footer class="d-flex flex-column text-center mt-auto">
+        <div class="container p-3">
+            <div class="row justify-content-around">
+                <div class="col-12 col-md-4 d-flex align-items-center justify-content-center justify-content-md-end mb-md-0">
+                    <a href="./underconstruction.html">FAQ</a>
+                </div>
+                <div class="col-12 col-md-4 d-flex align-items-center justify-content-center mb-md-0">
+                    <a href="./underconstruction.html">Contact</a>
+                </div>
+                <div class="col-12 col-md-4 d-flex align-items-center justify-content-center justify-content-md-start b-md-0">
+                    <a href="./underconstruction.html">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center copyright">
+            &copy; 2024 Pokémon App. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+</html>

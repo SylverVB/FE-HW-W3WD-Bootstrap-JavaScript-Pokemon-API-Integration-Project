@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="./static/style.css">
+<script src="./static/script.js" defer></script>
+<title>Pokémon App</title>
+</head>
+<body class="d-flex flex-column min-vh-100 home-page">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand ms-5" href="#">Pokémon App</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav d-flex col-3 col-lg-9 justify-content-center align-items-center justify-content-lg-evenly align-items-lg-center ms-auto">
+                    <li class="nav-item" id="navbar-manager"><a class="nav-link" href="./underconstruction.html">Gameplay</a></li>
+                    <li class="nav-item"><a class="nav-link" href="underconstruction.html">News</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./underconstruction.html">Support</a></li>
+                    <li class="nav-item" id="sign-in"><button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signInModal">Sign In</button></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="container-fluid d-flex pokemon-world">
+            <div class="container-fluid d-flex my-5 pb-5 justify-content-center align-content-center align-items-center search-btn position-relative">
+                <a href="search.html" class="btn btn-primary d-flex enter-world">Enter the world of Pokémon</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center mt-auto">
+        <div class="container p-3">
+            <div class="row justify-content-around">
+                <div class="col-12 col-md-4 d-flex align-items-center justify-content-center justify-content-md-end mb-md-0">
+                    <a href="./underconstruction.html">FAQ</a>
+                </div>
+                <div class="col-12 col-md-4 d-flex align-items-center justify-content-center mb-md-0">
+                    <a href="./underconstruction.html">Contact</a>
+                </div>
+                <div class="col-12 col-md-4 d-flex align-items-center justify-content-center justify-content-md-start b-md-0">
+                    <a href="./underconstruction.html">Terms of Use</a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center copyright">
+            &copy; 2024 Pokémon App. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Sign In Modal -->
+    <div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signInModalLabel">Sign In</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="./search.html" method="GET">
+                        <div class="mb-3">
+                            <label for="signInEmail" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="signInEmail" pattern="[\w]+@[\w]+[.][a-z]{2,3}" placeholder="name@example.com" required>
+                            <div class="invalid-feedback">Please enter a valid email.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="signInPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="signInPassword" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@#$%&?!+_-])[A-Za-z\d@#$%&?!+_-]{8,}$" placeholder="8 characters long, at least 1 letter, 1 number, 1 special character" required>
+                            <div class="invalid-feedback">Password must be at least 8 characters long, contain at least one letter, one number, and one special character.</div>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="rememberMe">
+                            <label class="form-check-label" for="rememberMe">Remember me</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Sign In</button>
+                    </form>
+                    <div class="mt-3">
+                        <p class="ms-0">New around here?<a href="#" data-bs-toggle="modal" data-bs-target="#signUpModal" class="ms-2 sign-up">Sign Up</a></p>
+                        <a class="ps-0 forgot-password" href="#">Forgot password?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sign Up Modal -->
+    <div class="modal fade" id="signUpModal" tabindex="-1" aria-labelledby="signUpModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signUpModalLabel">Sign Up</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="./search.html" method="GET">
+                        <div class="mb-3">
+                            <label for="signUpName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="signUpName" pattern="[A-Za-z]+ [A-Za-z]+" placeholder="John Doe" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="signUpEmail" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="signUpEmail" pattern="[\w]+@[\w]+[.][a-z]{2,3}" placeholder="name@example.com" required>
+                            <div class="invalid-feedback">Please enter a valid email.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="signUpPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="signUpPassword" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@#$%&?!+_-])[A-Za-z\d@#$%&?!+_-]{8,}$" placeholder="8 characters long, at least 1 letter, 1 number, 1 special character">
+                            <div class="invalid-feedback">Password must be at least 8 characters long, contain at least one letter, one number, and one special character.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="signUpConfirmPassword" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="signUpConfirmPassword" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@#$%&?!+_-])[A-Za-z\d@#$%&?!+_-]{8,}$" required>
+                        </div>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+
+
+    
+</body>
+</html>

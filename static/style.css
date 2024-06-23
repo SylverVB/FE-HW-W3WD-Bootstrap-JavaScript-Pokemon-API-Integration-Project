@@ -1,0 +1,241 @@
+body {
+    height: 100%;
+    margin: 0;
+    flex: -1;
+}
+
+.home-page {
+    background: url('./images/vbmountainbackground.jpeg');
+    min-height: 100vh;
+    background-size: cover;
+}
+    
+.navbar {
+    background: linear-gradient(#e66465, #9198e5);
+}
+
+.pokemon-world {
+    height: 75vh;
+    position: relative;
+}
+
+.search-btn {
+    background: url('./images/vbpokemonipad.png');
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.navbar-brand {
+    font-size: 40px;
+    font-family: "Kaushan Script", cursive;
+}
+
+.navbar-nav .nav-link {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+}
+
+.navbar-nav .nav-item {
+    font-family: "Baloo Bhaina 2", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+#sign-in {
+    line-height: 10px;
+}
+
+.forgot-password {
+    text-decoration: underline;
+}
+
+.forgot-password:hover {
+    text-decoration: none;
+}
+
+.sign-up:hover {
+    text-decoration: none;
+}
+
+.enter-world {
+    position: absolute;
+    top: 28%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(#e66465, #9198e5);
+}
+
+footer {
+    font-family: "Baloo Bhaina 2", sans-serif;
+    background: linear-gradient(#e66465, #9198e5);
+}
+
+footer .row div {
+    font-size: 16px;
+}
+
+.copyright {
+    font-size: 14px;
+}
+
+footer a {
+    text-decoration: none;
+    color: black;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 740px) {
+    .enter-world {
+        width: min-content;
+        top: 31%;
+        left: 50%;
+        font-size: 2.5vw;
+    }
+}
+
+@media screen and (max-width: 598px) {
+    .enter-world {
+        width: min-content;
+        top: 36%;
+        left: 50%;
+        font-size: 2.5vw;
+    }
+}
+
+@media screen and (max-width: 495px) {
+    .enter-world {
+        width: min-content;
+        top: 31%;
+        left: 50%;
+        font-size: 2.5vw;
+    }
+}
+
+/* search.html */
+
+.main-search-page {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-profile {
+    font-weight: 500;
+    font-family: "Baloo Bhaina 2", sans-serif;
+    color: white;
+}
+
+.main-search-page {
+    background: url('./images/vbpokemonbackground.jpeg');
+    min-height: 100vh;
+    width: 100%;
+    background-size: cover;
+}
+
+/* Search Section */
+
+.search-form {
+    background: linear-gradient(275deg, rgba(255, 255, 0, .5), rgba(255, 255, 0, 0) 70.71%), 
+                linear-gradient(170deg, rgba(0, 255, 255, .5), rgba(0, 255, 255, 0) 70.71%), 
+                linear-gradient(355deg, rgba(76, 0, 255, 0.7), rgba(255, 0, 255, 0) 80.71%);
+    max-height: 200px;
+    max-width: 500px;
+    border-radius: 15px;
+}
+
+.search-button-pokemon {
+    background: linear-gradient(275deg, rgba(115, 0, 255, 0.5), rgba(255, 255, 0, 0) 70.71%), 
+                linear-gradient(170deg, rgba(255, 132, 0, 0.5), rgba(0, 255, 255, 0) 70.71%), 
+                linear-gradient(355deg, rgba(64, 0, 255, 0.7), rgba(255, 0, 255, 0) 80.71%);
+    border: 1px solid white;
+    color: white;
+}
+
+.search-button-pokemon:hover {
+    color: white;
+}
+
+/* Display Pokemon Section */
+
+.card {
+    max-width: 800px;
+    margin-bottom: 20px;
+    background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+                linear-gradient(185deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+                linear-gradient(345deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+    border-radius: 10px;
+    color: white;
+}
+
+.card-pokemon-image {
+    text-align: center;
+}
+
+.card-pokemon-image .card-title {
+    margin-bottom: 30px; 
+}
+
+.card-pokemon-stat {
+    padding-left: 20px;
+}
+
+#image {
+    min-width: 250px;
+}
+
+@media screen and (min-width: 768px) {
+    #image {
+        max-width: 280px;
+    }
+}
+
+/* Team Builder Section */
+
+#team-display {
+    background: linear-gradient(217deg, rgba(255,255,0,.3), rgba(255,255,0,0) 70.71%),
+                linear-gradient(185deg, rgba(0,255,255,.3), rgba(0,255,255,0) 70.71%),
+                linear-gradient(345deg, rgba(255,0,255,.3), rgba(255,0,255,0) 70.71%);
+    border-radius: 15px;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+#your-team {
+    width: 60%;
+    height: auto;
+}
+
+#team {
+    display: flex;
+    flex: column;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.team-card {
+    margin: 10px;
+    background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+                linear-gradient(185deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
+                linear-gradient(345deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    width: 250px;
+    justify-content: space-between;
+}
+
+.team-card .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.team-card .btn {
+    margin-top: auto;
+}
