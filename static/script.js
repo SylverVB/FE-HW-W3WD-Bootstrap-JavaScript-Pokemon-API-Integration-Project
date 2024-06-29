@@ -7,18 +7,33 @@ async function handleSubmit(event) {
     const search = event.target.search.value;
     console.log(search);
     
-    const pokemonData = await fetchPokemonData(search);
-    console.log(pokemonData);
-    
-    displayPokemon(pokemonData);
+    try {
+        const pokemonData = await fetchPokemonData(search);
+        console.log(pokemonData);
+        
+        displayPokemon(pokemonData);
+    } catch (error) {
+        displayErrorMessage(search);
+    }
 }
 
 // STEP 2: Making a GET Request to our API:
 
 async function fetchPokemonData(name) {
-    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
+    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${name.toLowerCase()}`);
+    if (!response.ok) {
+        throw new Error('Pokémon not found');
+    }
     const result = await response.json();
     return result;
+}
+
+function displayErrorMessage(pokemonName) {
+    const modalBody = document.getElementById("errorModalBody");
+    modalBody.textContent = `${pokemonName} is not a valid Pokémon name!`;
+
+    const errorModal = new bootstrap.Modal(document.getElementById('errorModal'));
+    errorModal.show();
 }
 
 // STEP 3: Making Cards to display Pokémon:
@@ -50,6 +65,7 @@ function displayPokemon(pokemonData) {
     card.innerHTML = html;
     
     const display = document.getElementById("pokemon-display");
+    // display.innerHTML = ""; // Clearing previous result
     display.appendChild(card);
 }
 
